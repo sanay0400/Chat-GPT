@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="12dp"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:id="@+id/linear_layout"
+        android:elevation="6dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/Purple">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/white_logo"
+            android:layout_marginStart="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text=" Talk Buddy"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="147dp"
+            android:src="@drawable/call"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"
+        android:layout_below="@id/linear_layout"
+        android:layout_above="@+id/bottom_layout"/>
+
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
+        android:text="Hi! I'm Talk Buddy \n Try me out now!"
+        android:textColor="@color/Purple"
+        android:textSize="25dp" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/message_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:hint="Ask Anything..."
+            android:padding="16dp"
+            android:layout_toLeftOf="@id/send_btn"
+            android:background="@drawable/rounded_corner"/>
+
+        <ImageButton
+            android:id="@+id/send_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/baseline_send_24" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
